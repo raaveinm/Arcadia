@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Arcadia</string>
+
+    <string name="permission_denied">Volatile permissions are denied</string>
+    <string name="permanent_denial">Permission permanently denied. Tap to open Settings</string>
+
+    <string name="find_anchor">Slowly move device around</string>
 </resources>
