@@ -7,8 +7,7 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.padding
-import androidx.compose.material3.Scaffold
+import androidx.compose.material3.Surface
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
@@ -45,7 +44,7 @@ class MainActivity : ComponentActivity() {
 
         setContent {
             ArcadiaTheme {
-                Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
+                Surface(modifier = Modifier.fillMaxSize()) {
                     if (!permissionGranted) {
                         PermissionDeniedScreen(
                             isPermanentlyDenied = isPermanentlyDenied,
@@ -55,7 +54,7 @@ class MainActivity : ComponentActivity() {
                                     listOf(Manifest.permission.CAMERA)
                                 )
                             },
-                            modifier = Modifier.fillMaxSize().padding(innerPadding)
+                            modifier = Modifier.fillMaxSize()
                         )
                     } else {
                         StartArScreen()
